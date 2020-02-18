@@ -28,7 +28,10 @@ const Home = props => {
               <a href="#">Post Job</a>
             </li>
             <li className={classes.listItem}>
-              <a href="#" className={classes.btn}>
+              <a
+                href="#"
+                className={[classes.btn, classes.btnOrange].join(" ")}
+              >
                 Login
               </a>
             </li>
@@ -59,19 +62,36 @@ const Home = props => {
             </h2>
           </div>
           <div className={classes.jobSearchBox}>
+            <div className={classes.formControl}>
+              <label htmlFor="search">search</label>
+              <input
+                type="text"
+                className={classes.searchJob}
+                name="jobTitle"
+                placeholder="Type search title"
+              />
+            </div>
+            <div
+              className={[classes.formControl, classes.locationControl].join(
+                " "
+              )}
+            >
+              <label htmlFor="location">location</label>
+              <input
+                type="text"
+                className={classes.searchLocation}
+                name="location"
+                placeholder="Select location"
+              />
+            </div>
+
             <input
-              type="text"
-              className={classes.searchJob}
-              name="jobTitle"
-              placeholder="Type search title"
+              type="button"
+              value="search"
+              className={[classes.btn, classes.searchBtn, classes.btnBlue].join(
+                " "
+              )}
             />
-            <input
-              type="text"
-              className={classes.searchLocation}
-              name="location"
-              placeholder="Select location"
-            />
-            <input type="button" value="search" />
           </div>
         </div>
       </header>
