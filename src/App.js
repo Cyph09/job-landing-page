@@ -1,9 +1,10 @@
 import React from "react";
+import HomeSection from "./components/home";
 
 function App() {
   return (
-    <div>
-      <h2>Find your dream job!</h2>
+    <div className="Container">
+      <HomeSection />
     </div>
   );
 }
